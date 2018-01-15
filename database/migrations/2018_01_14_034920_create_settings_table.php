@@ -17,7 +17,7 @@ class CreateSettingsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('val');
-            $table->enum('type', ['int', 'boolean', 'string'])->default('string');
+            $table->char('type', 20)->default('string');
             $table->timestamps();
         });
     }
